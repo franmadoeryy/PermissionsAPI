@@ -1,6 +1,17 @@
-@Permissions.API_HostAddress = http://localhost:5137
+@Permissions_API_HostAddress = http://localhost:8080
 
-GET {{Permissions.API_HostAddress}}/weatherforecast/
+### POST create permission
+POST {{Permissions_API_HostAddress}}/api/permissions
+Content-Type: application/json
+
+{
+    "employeeName": "Cristiano",
+    "employeeLastName": "Ronaldo",
+    "permissionTypeId": 1,
+    "permissionDate": "2025-08-03T23:34:00Z"
+}
+
+
+### GET all permissions
+GET {{Permissions_API_HostAddress}}/api/permissions
 Accept: application/json
-
-###
